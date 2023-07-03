@@ -18,7 +18,6 @@ class MyApp extends StatelessWidget {
       builder: (ColorScheme? lightDynamic, ColorScheme? darkDynamic) {
         ColorScheme lightScheme;
         ColorScheme darkScheme;
-
         if (lightDynamic != null && darkDynamic != null) {
           lightScheme = lightDynamic.harmonized();
           lightCustomColors = lightCustomColors.harmonized(lightScheme);
@@ -57,21 +56,10 @@ class Home extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(
-          elevation: 2,
-          title: Text("Material Theme Builder"),
-        ),
-        body: Center(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.start,
-            children: [
-              const Text(
-                'Update with your UI',
-              ),
-            ],
-          ),
-        ),
-        floatingActionButton:
-            FloatingActionButton(onPressed: () => {}, tooltip: 'Increment'));
+      appBar: AppBar(
+        elevation: 2,
+        title: Text("Material Theme Builder"),
+      ),
+    );
   }
 }
